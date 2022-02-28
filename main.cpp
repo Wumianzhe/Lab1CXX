@@ -7,7 +7,26 @@ const double eps = 1e-8;
 int solveQuadratic(const double a, const double b, const double c, double& x1, double& x2);
 
 int main(int argc, char* argv[]) {
-    cout << "Hello world" << endl;
+    double a, b, c;
+    cout << "Enter equation (ax^2 + bx + c) coefficients" << endl;
+    cin >> a >> b >> c;
+    if (abs(a) < eps) {
+        cout << "Equation is not quadratic" << endl;
+        return 1;
+    }
+    double x1, x2;
+    int count = solveQuadratic(a, b, c, x1, x2);
+    switch (count) {
+    case 0:
+        cout << "Equation has no roots" << endl;
+        break;
+    case 1:
+        cout << "Equation root: " << x1 << endl;
+        break;
+    case 2:
+        cout << "Equation roots: " << x1 << ", " << x2 << endl;
+        break;
+    }
     return 0;
 }
 
