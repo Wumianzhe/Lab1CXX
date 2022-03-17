@@ -1,14 +1,8 @@
 #ifndef SOLVER_H_
 #define SOLVER_H_
 
+#include "solution.hpp"
 #include <iostream>
-class solution {
-  public:
-    void printFancy(std::ostream& out) const;
-    int _rootCount;
-    double _x1;
-    double _x2;
-};
 
 class equation {
   public:

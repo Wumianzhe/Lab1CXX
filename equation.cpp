@@ -1,4 +1,4 @@
-#include "solver.hpp"
+#include "equation.hpp"
 #include "math.h"
 #include <stdexcept>
 
@@ -23,19 +23,4 @@ solution equation::solve() const {
     double x_1 = (-_b + d) / (2 * _a);
     double x_2 = (-_b - d) / (2 * _a);
     return {rootCount, x_1, x_2};
-}
-
-void solution::printFancy(std::ostream& out) const {
-    switch (_rootCount) {
-    case 0:
-        out << "Equation has no roots";
-        break;
-    case 1:
-        out << "Equation root: " << _x1;
-        break;
-    case 2:
-        out << "Equation roots: " << _x1 << ", " << _x2;
-        break;
-    }
-    out << std::endl;
 }

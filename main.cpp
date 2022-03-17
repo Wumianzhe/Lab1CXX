@@ -1,4 +1,4 @@
-#include "solver.hpp"
+#include "equation.hpp"
 #include <iostream>
 #include <stdexcept>
 
